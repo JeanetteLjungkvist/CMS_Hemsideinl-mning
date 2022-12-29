@@ -1,0 +1,15 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+    <div class="hero-container">
+        <h1>@Model.Value("headerText")</h1>
+        <p>What are you waiting for?</p>
+        <div class="hero-btns">
+          <a to="/products" class="hero-btn">
+            Our Courses
+          </a>
+    </div>
