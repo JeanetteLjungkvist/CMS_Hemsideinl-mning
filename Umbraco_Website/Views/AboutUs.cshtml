@@ -1,19 +1,16 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.AboutUs>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "Master.cshtml";
 }
 
 <div>
-
     @await Html.PartialAsync("navbar")
     
-    @await Html.PartialAsync("hero_section")
+    @await Html.PartialAsync("aboutUs")
     
     @await Html.PartialAsync("footer")
-
-         
- </div>         
-         
     
+  
+</div>
