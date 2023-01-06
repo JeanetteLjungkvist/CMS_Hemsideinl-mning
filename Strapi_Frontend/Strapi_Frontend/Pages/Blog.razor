@@ -18,8 +18,8 @@ else
     <section class="text-gray-600 body-font">
         <div class="container px-5 py-4 mx-auto">
             <div class="text-center mb-20">
-                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Strapi Blazor Blog App</h1>
-                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">British History - From the Anglo-Saxon era to present day Britain.</p>
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">My Blog</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Here I share my thoughts</p>
                 <div class="flex mt-6 justify-center">
                     <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
                 </div>
@@ -28,26 +28,15 @@ else
                 
                 @foreach (var post in allPosts.data)
                 {
-                    <div class="xl:w-1/4 md:w-1/2 p-4">
-                        <div class="bg-gray-100 p-6 rounded-lg">
-                            <h2 class="text-lg text-gray-900 font-medium title-font mb-4">@post.BlogTitle</h2>
-                            
-                         alt="content">
-                            <NavLink href="@($"post/{post.Id.ToString()}")">
-
-                                <a class="text-indigo-500 inline-flex items-center">
-                                    Read More
-                                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                         stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-                                        <path d="M5 12h14M12 5l7 7-7 7"></path>
-                                    </svg>
-                                </a>
-                                
-                                <p>@post.BlogText</p>
-                                <p>@post.Author</p>
-                            </NavLink>
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">@post.BlogTitle</h5>
+                            <p class="card-text"><small class="text-muted">Published: @post.Date</small></p>
+                            <p class="card-text">@post.BlogText</p>
+                            <p class="card-text"><small class="text-muted">Written by: @post.Author</small></p>
                         </div>
                     </div>
+
                 }
             </div>
         </div>
@@ -62,41 +51,28 @@ else
     protected override async Task OnInitializedAsync()
     {
         strapi_api_url = Configuration["AppSettings:STRAPI_API_URL"];
-        strapi_api_url = Configuration["AppSettings:STRAPI_API_TOKEN"];
+        strapi_api_token = Configuration["AppSettings:STRAPI_API_TOKEN"];
 
         var url = "{STRAPI_API_URL}/api/blogposts";
 
         Http.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", strapi_api_token);
 
         allPosts = await Http.GetFromJsonAsync<BlogPostList>(url.Replace("{STRAPI_API_URL}", strapi_api_url));
-        
-        /*if (allPosts.data != null)
-        {
-            foreach (var post in allPosts.data)
-            {
-                post.Image.Url = strapi_api_url + post.Image.Url;
-            }
-        }*/
+
     }
 
     public class BlogPost
     {
         public int Id { get; set; }
 
-        public string BlogTitle { get; set; }
+        public string? BlogTitle { get; set; }
         
-        public string BlogText { get; set; }
+        public string? BlogText { get; set; }
         
-        public string Author { get; set; }
+        public string? Author { get; set; }
 
         public DateTime Date { get; set; }
-        
-        public Image Image { get; set; }
-    }
 
-    public class Image
-    {
-        public string Url { get; set; }
     }
 
     public class BlogPostList

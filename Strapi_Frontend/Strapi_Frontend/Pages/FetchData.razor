@@ -7,51 +7,58 @@
 
 <p>This component demonstrates fetching data from the server.</p>
 
-@if (forecasts == null)
+@if (recipe == null)
 {
     <p><em>Loading...</em></p>
 }
 else
 {
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var forecast in forecasts)
-            {
-                <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-4 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">My Blog</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Here I share my thoughts</p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
+            </div>
+            <div class="flex flex-wrap -m-3">
+
+                @foreach (var item in recipe)
+                {
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">@item.Title</h5>
+                            <img src="@item.Image" alt="bla" />
+                            <li class="card-text">@item.Ingredients</li>
+                            <li class="card-text">@item.Description</li>
+
+                            
+                        </div>
+                    </div>
+
+                }
+            </div>
+        </div>
+    </section>
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private RecipeClient[]? recipe;
 
     protected override async Task OnInitializedAsync()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        recipe = await Http.GetFromJsonAsync<RecipeClient[]>("sample-data/recipe.json");
     }
 
-    public class WeatherForecast
+    public class RecipeClient
     {
-        public DateTime Date { get; set; }
+        public string Title { get; set; }
 
-        public int TemperatureC { get; set; }
+        public string Image { get; set; }
 
-        public string? Summary { get; set; }
+        public string? Ingredients { get; set; }
 
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+        public string Description { get; set; }
     }
 }

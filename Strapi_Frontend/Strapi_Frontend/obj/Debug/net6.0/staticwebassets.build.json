@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jS0Xa88UEpSVRoGzICMljhtK9RzS5lQM4HJ1GA1NxiU=",
+  "Hash": "fZEkVF/mBxkLVnq+iIaI59i3h5q0Lz5I6nQ9mzN/VTg=",
   "Source": "Strapi_Frontend",
   "BasePath": "/",
   "Mode": "Root",
@@ -6902,6 +6902,23 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Identity": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\css\\herosection.css",
+      "SourceId": "Strapi_Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/herosection.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\herosection.css"
+    },
+    {
       "Identity": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "Strapi_Frontend",
       "SourceType": "Discovered",
@@ -7106,12 +7123,12 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\sample-data\\weather.json",
+      "Identity": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\sample-data\\recipe.json",
       "SourceId": "Strapi_Frontend",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "sample-data/weather.json",
+      "RelativePath": "sample-data/recipe.json",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -7120,7 +7137,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\weather.json"
+      "OriginalItemSpec": "wwwroot\\sample-data\\recipe.json"
     }
   ]
 }

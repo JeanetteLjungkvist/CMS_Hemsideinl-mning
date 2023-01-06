@@ -29,6 +29,10 @@
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
+      "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\css\\herosection.css",
+      "PackagePath": "staticwebassets\\css\\herosection.css"
+    },
+    {
       "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
@@ -77,8 +81,8 @@
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\sample-data\\weather.json",
-      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+      "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\sample-data\\recipe.json",
+      "PackagePath": "staticwebassets\\sample-data\\recipe.json"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Strapi_Frontend.Microsoft.AspNetCore.StaticWebAssets.props",

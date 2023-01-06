@@ -1,0 +1,62 @@
+﻿@page "/about"
+
+@inject HttpClient Http
+@using Microsoft.Extensions.Configuration;
+@using Models
+@using System.Net.Http.Headers
+@inject IConfiguration Configuration
+
+<PageTitle>About Us</PageTitle>
+
+@if (aboutUs == null)
+{
+    <p><em>Loading...</em></p>
+}
+
+else
+{
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-4 mx-auto">
+            <div class="text-center mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">My Blog</h1>
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Here I share my thoughts</p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
+            </div>
+            <div class="flex flex-wrap -m-3">
+                <div class="card mb-3">
+                        <img src="" class="card-img-top" alt="image">
+                        <div class="card-body">
+                            <h5 class="card-title">@aboutUs.Data.Title</h5>
+                            <p class="card-text">@aboutUs.Data.Description</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+}
+
+@code {
+    private AboutUsResponse aboutUs;
+    
+
+    protected override async Task OnInitializedAsync()
+    {
+        aboutUs = await Http.GetFromJsonAsync<AboutUsResponse>("api/about");
+    }
+
+    public class AboutUs
+    {
+        public string? Title { get; set; }
+        
+        public string? Description { get; set; }
+    }
+
+    public class AboutUsResponse
+    {
+        public AboutUs Data { get; set; }
+    }
+
+}
+
