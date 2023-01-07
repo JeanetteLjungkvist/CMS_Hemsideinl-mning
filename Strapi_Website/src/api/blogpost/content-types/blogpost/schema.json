@@ -23,6 +23,9 @@
     "Author": {
       "type": "string",
       "default": "Author name"
+    },
+    "Date": {
+      "type": "date"
     }
   }
 }

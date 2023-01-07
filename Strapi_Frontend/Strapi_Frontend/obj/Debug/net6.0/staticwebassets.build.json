@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fZEkVF/mBxkLVnq+iIaI59i3h5q0Lz5I6nQ9mzN/VTg=",
+  "Hash": "u5Q2pi5WmlbNfo86Np8ZKriGdt3ZSQYSxkH4+rtfTxk=",
   "Source": "Strapi_Frontend",
   "BasePath": "/",
   "Mode": "Root",
@@ -7106,6 +7106,40 @@
       "OriginalItemSpec": "wwwroot\\icon-192.png"
     },
     {
+      "Identity": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\images\\frank-mckenna.jpeg",
+      "SourceId": "Strapi_Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/frank-mckenna.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\frank-mckenna.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\images\\sean-oulashin.jpeg",
+      "SourceId": "Strapi_Frontend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/sean-oulashin.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\sean-oulashin.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\index.html",
       "SourceId": "Strapi_Frontend",
       "SourceType": "Discovered",
@@ -7121,23 +7155,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\index.html"
-    },
-    {
-      "Identity": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\sample-data\\recipe.json",
-      "SourceId": "Strapi_Frontend",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "sample-data/recipe.json",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\sample-data\\recipe.json"
     }
   ]
 }

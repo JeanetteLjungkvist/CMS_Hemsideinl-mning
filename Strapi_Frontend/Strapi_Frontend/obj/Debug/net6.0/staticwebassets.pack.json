@@ -77,12 +77,16 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
+      "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\images\\frank-mckenna.jpeg",
+      "PackagePath": "staticwebassets\\images\\frank-mckenna.jpeg"
     },
     {
-      "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\sample-data\\recipe.json",
-      "PackagePath": "staticwebassets\\sample-data\\recipe.json"
+      "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\images\\sean-oulashin.jpeg",
+      "PackagePath": "staticwebassets\\images\\sean-oulashin.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\jeane\\source\\repos\\CMS\\CMS_Hemsideinl-mning\\Strapi_Frontend\\Strapi_Frontend\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.Strapi_Frontend.Microsoft.AspNetCore.StaticWebAssets.props",

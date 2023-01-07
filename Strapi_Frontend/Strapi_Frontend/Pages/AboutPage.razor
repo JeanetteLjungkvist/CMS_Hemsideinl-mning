@@ -1,0 +1,72 @@
+﻿@page "/aboutpage"
+
+@inject HttpClient Http
+@using Microsoft.Extensions.Configuration;
+@using Models
+@inject IConfiguration Configuration
+
+@if (aboutUs == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-4 mx-auto">
+            <div class="text-center mb-20">
+                @foreach (var item in aboutUs.data)
+                {
+                    <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">@item.Title</h1>
+                }
+                
+                <p class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Suspendisse ullamcorper elementum laoreet</p>
+                <div class="flex mt-6 justify-center">
+                    <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
+                </div>
+            </div>
+            <div class="flex flex-wrap -m-3">
+                @foreach (var item in aboutUs.data)
+                {
+                    <div class="card" style="width: 40rem; margin: 0 auto; float: none; margin-bottom: 10px;">
+                        <img src="images/frank-mckenna.jpeg" />
+                        <div class="card-body">
+                            <h5 class="card-title"></h5>
+                            <p class="card-text">@item.Description</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+}
+
+
+@code {
+    private AboutList aboutUs = null;
+    public string strapi_api_url;
+
+    protected override async Task OnInitializedAsync()
+    {
+        strapi_api_url = Configuration["AppSettings:STRAPI_API_URL"];
+        var url = "{STRAPI_API_URL}/api/abouts?populate=*";
+        aboutUs = await Http.GetFromJsonAsync<AboutList>(url.Replace("{STRAPI_API_URL}", strapi_api_url));
+       
+    }
+
+    public class About
+    {
+        public int Id { get; set; }
+
+        public string Title { get; set; }
+
+        public string Description { get; set; }
+        
+    }
+
+    public class AboutList
+    {
+        public List<About> data { get; set; }
+    }
+
+}
+

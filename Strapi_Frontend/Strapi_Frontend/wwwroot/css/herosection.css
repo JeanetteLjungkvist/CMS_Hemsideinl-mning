@@ -1,5 +1,6 @@
 ﻿.hero-container {
-    background: url("/images/nasa.jpg") center center/cover no-repeat;
+    background: url("images/sean-oulashin.jpeg") center center/cover no-repeat;
+    background-image: url('images/sean-oulashin.jpeg');
     height: 100vh;
     width: 100%;
     display: flex;

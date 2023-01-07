@@ -198,13 +198,13 @@
       "mscorlib.dll": "sha256-cx\/3nJhFns3tZhQNQOyiRyKJESKxOjLVufzWnri6KSA=",
       "netstandard.dll": "sha256-yWufW5W4SSfjocBcWTEDqnFwTd\/VYtLMc2Y9mPmlggc=",
       "System.Private.CoreLib.dll": "sha256-H009wzPwRoDZlwvpN4KLCsUwN7Y1AmjKB3PIEHA7ObQ=",
-      "Strapi_Frontend.dll": "sha256-I1mV8sOzbIm50sBJycPAYKuqtIunbMVdo3c8nOdBaa4="
+      "Strapi_Frontend.dll": "sha256-20ILjbFFfMEJII6prb7KTfqsgSt\/UwmofOnF2c\/59r0="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Strapi_Frontend.pdb": "sha256-0I+c1eAKVzcDDqCvcakYTx9JaeFQrNQ6l+SBCZzIEeM="
+      "Strapi_Frontend.pdb": "sha256-7GL9mPXm84vFHnfFga9yIhN3GSz6jQj+G+dxZMjtQxc="
     },
     "runtime": {
       "dotnet.6.0.11.pnbthgb4qt.js": "sha256-F30V+6jU3jwJYFZoLuwMAqzTiOXu6q7zGgOdjYBofDI=",
