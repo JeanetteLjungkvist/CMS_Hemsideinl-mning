@@ -1,17 +1,17 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
-@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.News>
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.Home>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
 @{
 	Layout = "Master.cshtml";
 }
 
 <div>
+
     @await Html.PartialAsync("navbar")
-    @Model.Value("newsTitle")
     
-    @await Html.PartialAsync("newsPage")
+    @await Html.PartialAsync("heroSection")
     
     @await Html.PartialAsync("footer")
-    
-  
-</div>
+
+         
+ </div>   
