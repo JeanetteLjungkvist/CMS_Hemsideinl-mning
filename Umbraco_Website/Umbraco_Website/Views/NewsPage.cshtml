@@ -1,16 +1,43 @@
 ﻿@using Umbraco.Cms.Web.Common.PublishedModels;
 @inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.NewsPage>
 @using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using Umbraco_Website.NewsArticle;
+
 @{
 	Layout = "Master.cshtml";
 }
 
+
+@{
+    var data = await NewsClient.GetNewsArticlesAsync();
+}
+<div style="text-align: center; margin: 25px;">
+    <h1 >@Model.Value("headerTextNews")</h1>
+</div>
+
 <div>
-    @await Html.PartialAsync("navbar")
-    
-    @await Html.PartialAsync("newsPage")
-    
-    @await Html.PartialAsync("footer")
-    
-  
+
+    @if(data == null) {
+        <div>
+            Image not found
+        </div>
+    }
+    else {
+        foreach (var articles in data.Articles)
+        {
+            <div>
+                <div class="card" style="width: 60rem; margin: 0 auto; float: none; margin-bottom: 10px; padding: 20px;">
+                    <img src="@articles.UrlToImage" class="card-img-top" alt="News Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@articles.Title</h5>
+                        <p class="card-text">@articles.Description</p>
+                        <p class="card-text">Written by: @articles.Author</p>
+                        <p class="card-text"><small class="text-muted">@articles.PublishedAt</small></p>
+                        
+                    </div>
+                </div>
+            </div>
+        }
+    }
+
 </div>

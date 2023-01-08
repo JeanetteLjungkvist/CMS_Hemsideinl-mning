@@ -40,9 +40,10 @@
         {
 
             var client = new HttpClient();
+            client.DefaultRequestHeaders.Add("User-Agent", "C# App");
 
 
-            var respons = await client.GetFromJsonAsync<Root?>("https://newsapi.org/v2/top-headlines?country=se&category=science&apiKey=066adeace431427ab6ea1cc3102cd97b");
+            var respons = await client.GetFromJsonAsync<Root?>("https://newsapi.org/v2/top-headlines?country=us&category=science&apiKey=066adeace431427ab6ea1cc3102cd97b");
 
             return respons;
         }

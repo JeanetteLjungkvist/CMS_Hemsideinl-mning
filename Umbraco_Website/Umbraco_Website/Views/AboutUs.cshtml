@@ -6,11 +6,19 @@
 }
 
 <div>
-    @await Html.PartialAsync("navbar")
+   
+   
+    <div class="about-container">
+        
+        <div class="about-text-container">
+          <h1>@Model.Value("headerTextAbout")</h1>
+          
+          <div class="about-text">
+              @Model.Value("contentTextAbout")
+          </div>
+        </div>
+    </div>
     
-    @await Html.PartialAsync("aboutUs")
-    
-    @await Html.PartialAsync("footer")
-    
+   
   
 </div>
